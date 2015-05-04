@@ -1,0 +1,22 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{ folder }}" ng-init="openFolder()">
+    <ion-content class="padding">
+        <button class="button button-block button-positive" ng-click="priviousFolder()">GoBack</button>
+        <ul class="list">
+            <li class="item item-divider">Folders</li>
+            <li class="item item-icon-right" ng-repeat="item in fileList.crossbow_filelist[0].dirs" ng-click="goFolder(item.name)">
+                {{item.name}}
+                <i class="icon ion-chevron-right"></i>
+            </li>
+            <li class="item item-divider">Files</li>
+            <li class="item" ng-repeat="item in fileList.crossbow_filelist[0].files" ng-click="openFile(item.name)">
+                <a ng-href="openFile(item.name)">{{item.name}}</a>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

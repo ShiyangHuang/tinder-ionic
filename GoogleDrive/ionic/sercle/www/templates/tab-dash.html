@@ -1,0 +1,10 @@
+<ion-view view-title="Volume">
+  <ion-content class="padding">
+      <ion-list class="list">
+          <ion-item class="item item-icon-right" ng-repeat="item in volume" type="item-text-wrap" href="#/tab/dash/{{item.uuid}}">
+              {{item.name}}
+              <i class="icon ion-chevron-right"></i>
+          </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>
